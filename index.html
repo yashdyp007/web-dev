@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yash Thombare | Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(to right top, #1e3c72, #2a5298);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+
+    .wrapper {
+      text-align: center;
+      padding: 40px;
+      background: rgba(255, 255, 255, 0.07);
+      border-radius: 20px;
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+      max-width: 900px;
+      width: 90%;
+    }
+
+    .header h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .header h2 {
+      font-size: 20px;
+      font-weight: 500;
+      color: #d1d1d1;
+      margin-bottom: 30px;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 30px;
+      text-align: center;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      text-decoration: none;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.4);
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: conic-gradient(from 180deg, #ff512f, #dd2476, #1fa2ff, #12d8fa, #ff512f);
+      animation: spin 6s linear infinite;
+      z-index: 0;
+      opacity: 0.2;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(1turn);
+      }
+    }
+
+    .card-content {
+      position: relative;
+      z-index: 2;
+      font-size: 26px;
+      font-weight: bold;
+    }
+
+    .html { background: rgba(240, 101, 41, 0.15); }
+    .css { background: rgba(41, 101, 241, 0.15); }
+    .xml { background: rgba(142, 68, 173, 0.15); }
+
+    @media (max-width: 600px) {
+      .header h1 { font-size: 28px; }
+      .card-content { font-size: 22px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class="header">
+      <h1>👨‍💻 Yash Nitin Thombare</h1>
+      <h2>🎓 Roll No: 22</h2>
+    </div>
+
+    <div class="card-grid">
+      <a href="HTML/assignments.html" class="card html">
+        <div class="card-content">HTML</div>
+      </a>
+      <a href="css/index.html" class="card css">
+        <div class="card-content">CSS</div>
+      </a>
+      <a href="XML/index.html" class="card xml">
+        <div class="card-content">XML</div>
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>
